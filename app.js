@@ -22,10 +22,16 @@ app.get('/', function (req, res) {
   var baseURL = req.protocol + '://' + req.headers.host;
   var routes = {
     docs: {
-      endpoint: baseURL + '/docs'
+      endpoint: baseURL + '/docs',
+			name: 'Document Listing API',
+			description: 'Returns list of previously created documents. This is information like the name, the date, and if it was a test document.',
+			documentation: 'https://docraptor.com/documentation/api#api_listing'
     },
     doc_logs: {
-      endpoint: baseURL + '/doc_logs'
+      endpoint: baseURL + '/doc_logs',
+			name: 'Document Log Listing API',
+			description: 'Returns a list of all previously attempted document creations. The returned data here includes information about document creation success and failure, any errors that were encountered, and information about generation time.',
+			documentation: 'https://docraptor.com/documentation/api#doc_log_listing'
     }
   }
   res.json(routes);

@@ -1,5 +1,5 @@
 {
-  "name": "DocRaptor Logs",
+  "name": "docraptor-logs",
   "version": "1.0.0",
   "description": "Node app for returning DocRaptor logs",
   "main": "index.js",
